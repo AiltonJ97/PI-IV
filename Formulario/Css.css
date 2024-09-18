@@ -1,0 +1,18 @@
+.div{
+    font-size: 36px;
+}
+
+.input-grande {
+    font-size: 36px;
+    border-width: 2px;
+    border-color: #1a33e5;
+    background-color: #F3F3F3;
+}
+.input-pref {
+    height: 300px;
+    width: 100%;
+    font-size: 36px;
+    border-width: 2px;
+    border-color: #1a33e5;
+    text-align: start;
+}
