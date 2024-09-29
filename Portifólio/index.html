@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Portfólio</title>
+    <link rel="stylesheet" href="styles1.css">
+</head>
+
+<body>
+    <header>
+        <h1>Portfólio</h1>
+        <nav>
+            <ul>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#projetos">Projetos</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="sobre">
+        <h2>Sobre Mim</h2>
+        <p>Olá! Eu sou um desenvolvedor back-end. Comecei na área de programação em junho de 2022, estou estudando
+            linguagens e
+            lógica de programação em busca de trabalhar no desenvolvimento de sistemas com foco em Java. Tenho vontade
+            de aprender, desenvolver minhas habilidades e por em prática todo meu conhecimento sempre me mantendo
+            atualizado e encarando novos desafios.
+        </p>
+        <p>
+        <h3>
+            Java - Orientado a Objetos
+        </h3>
+        <ul>
+            <li>
+                Desenvolvimento de aplicações Java
+            </li>
+            <li>
+                MySQL - Workbench/H2test/PostgreSQL
+            </li>
+            <li>
+                Springboot - JPA/Hibernate.
+            </li>
+            <li>
+                API Rest
+            </li>
+            <li>
+                JavaFX - Programação Desktop
+            </li>
+        </ul>
+        <h3>
+            Desenvolvimento Mobile
+        </h3>
+        <ul>
+            <li>
+                Android/IOS/Web com Flutter
+            </li>
+            <li>
+                JavaScript/ES6+ (domínio de funções, classes, etc.)
+            </li>
+            <li>
+                Uso de componentes funcionais e de classe
+            </li>
+            <li>
+                <strong>Hooks</strong> como <strong>useState</strong> e <strong>useEffect</strong>
+            </li>
+            <li>
+                Gerenciamento de estado (com Redux ou Context API)
+            </li>
+            <li>
+                Roteamento com React Router
+            </li>
+        </ul>
+        </p>
+    </section>
+
+    <section id="projetos">
+        <h2>Projetos</h2>
+
+        <div class="projeto">
+            <div>
+                <img src="assets/imagem-projeto1.jpg" alt="Imagem do Projeto 1" class="projeto-img">
+                <br>
+                <img src="assets/imagem-projeto1(1).jpg" alt="Imagem do Projeto 1" class="projeto-img">
+                <br>
+                <img src="assets/imagem-projeto1(2).jpg" alt="Imagem do Projeto 1" class="projeto-img">
+            </div>
+            <div class="descricao">
+                <h3>Projeto Maven</h3>
+                <p>
+                    O Apache Maven é uma ferramenta de gerenciamento e compreensão
+                    de projetos assim como o Apache Ant (ambas feitas em Java) porém
+                    possui conceitos e funcionalidades diferentes, em especial podemos
+                    falar da base do Maven que é o Modelo de Objeto de Projeto, este
+                    modelo organiza todas as informações do projeto em um único arquivo: o pom.xml.
+                </p>
+            </div>
+        </div>
+
+        <div class="projeto">
+            <img src="assets/imagem-projeto2.jpg" alt="Imagem do Projeto 2" class="projeto-img">
+            <div class="descricao">
+                <h3>Projeto Springboot</h3>
+                <p>
+                    Uma aplicação Java que facilita o desenvolvimento de APIs e serviços back-end, com configuração
+                    mínima. Ele segue uma arquitetura em camadas, com:
+                    Controller: Define os endpoints da API.
+                    Service: Contém a lógica de negócio.
+                    Repository: Interage com o banco de dados, usando Spring Data JPA.
+                    O Spring Boot oferece integração com bancos de dados, segurança, e suporte a testes, facilitando a
+                    criação de aplicações escaláveis e prontas para produção.
+                </p>
+            </div>
+        </div>
+
+        <div class="projeto">
+            <img src="assets/imagem-projeto3(1).jpg" alt="imagem do Projeto 3" class="projeto-img">
+            <img src="assets/imagem-projeto3(2).jpg" alt="imagem do Projeto 3" class="projeto-img">
+            <div class="descricao">
+                <h3>Projeto React</h3>
+                <p>
+                    Um projeto React de cadastro de pessoas com nome, idade, sexo e valor salarial permite gerenciar uma
+                    lista de pessoas através de uma interface intuitiva.
+                    Campos para inserção de nome (texto), idade (número), sexo (seleção entre
+                    opções), e valor salarial (slider).
+                    Lista de pessoas: Exibe todos os registros cadastrados em uma tabela ou lista dinâmica.    
+                    A aplicação utiliza React Hooks como useState para controlar o estado dos dados e useEffect para
+                    interações.
+                </p>
+            </div>
+
+        </div>
+
+        <!-- Adicione mais projetos conforme necessário -->
+    </section>
+
+    <!-- Container do Lightbox -->
+    <div id="lightbox" class="lightbox">
+        <span class="close">&times;</span>
+        <img class="lightbox-content" id="img-ampliada">
+    </div>
+
+    <section id="contato">
+        <h2>Contato</h2>
+        <p>Entre em contato comigo por email: <a href="mailto:ailton@gmail.com">ailton@gmail.com</a></p>
+        <p>Curriculo: <a target="_blank" href="Curriculo.html">Link</a></p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Meu Portfólio. Todos os direitos reservados.</p>
+    </footer>
+</body>
+<script>
+    // Seleciona o lightbox, a imagem ampliada e o botão de fechar
+    var lightbox = document.getElementById("lightbox");
+    var imgAmpliada = document.getElementById("img-ampliada");
+    var closeBtn = document.querySelector(".close");
+
+    // Adiciona o evento de clique para todas as imagens do projeto
+    document.querySelectorAll('.projeto-img').forEach(function (img) {
+        img.addEventListener('click', function () {
+            lightbox.style.display = "flex"; // Exibe o lightbox
+            imgAmpliada.src = this.src; // Define a imagem ampliada com a mesma fonte da imagem clicada
+        });
+    });
+
+    // Fecha o lightbox quando o botão de fechar for clicado
+    closeBtn.addEventListener('click', function () {
+        lightbox.style.display = "none"; // Oculta o lightbox
+    });
+
+    // Fecha o lightbox ao clicar fora da imagem ampliada
+    lightbox.addEventListener('click', function (e) {
+        if (e.target === lightbox) {
+            lightbox.style.display = "none";
+        }
+    });
+</script>
+
+</html>
